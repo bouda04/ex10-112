@@ -1,0 +1,78 @@
+package ex10_112;
+
+public class Bag {
+	int red, yellow, green, brown;
+	boolean isBig;
+	
+	
+	public Bag(String candies) {//rrrrggbbyyyy
+		for(int i=0;i<candies.length();i++) {
+			switch(candies.charAt(i)) {
+			case 'r':
+				red++;
+				break;
+			case 'g':
+				green++;
+				break;
+			case 'b':
+				brown++;
+				break;
+			case 'y':
+				yellow++;
+				break;
+			}//switch
+		}//for
+		this.isBig = (candies.length()==28);
+	}
+	
+	public boolean isBalanced() {
+		return red==green && green==yellow && yellow==brown;
+	}
+
+	public int getRed() {
+		return red;
+	}
+
+	public void setRed(int red) {
+		this.red = red;
+	}
+
+	public int getYellow() {
+		return yellow;
+	}
+
+	public void setYellow(int yellow) {
+		this.yellow = yellow;
+	}
+
+	public int getGreen() {
+		return green;
+	}
+
+	public void setGreen(int green) {
+		this.green = green;
+	}
+
+	public int getBrown() {
+		return brown;
+	}
+
+	public void setBrown(int brown) {
+		this.brown = brown;
+	}
+
+	public boolean isBig() {
+		return isBig;
+	}
+
+	public void setBig(boolean isBig) {
+		this.isBig = isBig;
+	}
+
+	@Override
+	public String toString() {
+		return "Bag [red=" + red + ", yellow=" + yellow + ", green=" + green + ", brown=" + brown + "]";
+	}
+	
+
+}
